@@ -6,10 +6,7 @@ from story import STORY_DB, next_stage
 
 _BANNER = "=" * 50
 
-
 def _print_banner() -> None:
-    print(_BANNER)
-    print("  GAMEAI NPC SYSTEM v4.0")
     print(_BANNER)
     print("Type 'next' to advance stage, 'exit' to quit.\n")
 
@@ -19,13 +16,11 @@ def _print_stage_header(stage: str) -> None:
     print(f"{'─' * 50}")
     print(f"\n{STORY_DB[stage]['description']}\n")
 
-
 def _print_emotion_summary(characters: list[str]) -> None:
     print("\n  [Emotional State]")
     for char in characters:
         e = get_emotions(char)
         print(f"  {char}: happiness={e['happiness']} anger={e['anger']} trust={e['trust']}")
-
 
 def _handle_narration_only_stage(stage: str) -> str:
     """Run a stage with no NPCs (pure narration). Returns the next stage key."""
@@ -37,7 +32,6 @@ def _handle_narration_only_stage(stage: str) -> str:
     print(f"\n[NARRATOR]: {result.content.strip()}\n")
     input("\nPress Enter to continue...")
     return next_stage(stage)
-
 
 def run_game() -> None:
     stage = "start"

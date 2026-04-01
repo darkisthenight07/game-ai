@@ -59,7 +59,6 @@ def build_agent():
         builder.add_edge(f"{base}_memory", "output_reviewer")
 
     builder.add_edge("output_reviewer", END)
-
     return builder.compile()
 
 

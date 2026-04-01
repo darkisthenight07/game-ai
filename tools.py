@@ -85,11 +85,11 @@ def write_tool(input: str) -> str:
 
     Modes:
       'short,<character>,<text>'
-        — appends text to short-term memory (capped at 10 entries)
+        —appends text to short-term memory (capped at 10 entries)
 
       'long,<character>,<relation>,<target>,<value>,<context>'
-        — writes a relationship edge to Neo4j long-term memory
-        — value is an integer weight (e.g. 1 = weak, 5 = strong)
+        —writes a relationship edge to Neo4j long-term memory
+        —value is an integer weight (e.g. 1 = weak, 5 = strong)
 
     Example short: 'short,doctor,Player asked about the wound.'
     Example long:  'long,doctor,FEARS,player,2,doctor hesitated when asked about death'

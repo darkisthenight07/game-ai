@@ -1,10 +1,9 @@
 # memory/short_term.py — In-process short-term memory (per session)
 
-_MAX_ENTRIES = 10
+_MAX_ENTRIES = 5
 
 # Keyed by character name → list of recent interaction strings
 _short_term: dict[str, list[str]] = {}
-
 
 def st_read(char: str) -> list[str]:
     """Return the last N short-term memory entries for a character."""

@@ -1,6 +1,6 @@
 # emotion.py — In-process emotion state (happiness, anger, trust)
 
-# Defaults and valid emotion keys
+# Defaults
 _DEFAULTS: dict[str, int] = {"happiness": 50, "anger": 20, "trust": 40}
 
 _emotions: dict[str, dict[str, int]] = {}

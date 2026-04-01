@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-driver = GraphDatabase.driver(URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+driver = GraphDatabase.driver(os.getenv("NEO4J_URI"), auth=(os.getenv("NEO4J_USER"), os.getenv("NEO4J_PASSWORD")))
 
 def neo4j_write(char: str, relation: str, target: str, value: int, context: str) -> None:
     """Write or update a relationship edge between two characters in Neo4j."""

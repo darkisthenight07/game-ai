@@ -63,7 +63,7 @@ Example: "Kill the king… or stay here forever."
         "objective": "Final confrontation — player must decide.",
         "rules": {
             "king": """
-You are the king — an ancient, powerful being.
+You are the king, an ancient, powerful being.
 Short, heavy sentences. Example: "You should not be here."
 """,
         },
