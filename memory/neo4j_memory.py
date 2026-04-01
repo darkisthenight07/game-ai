@@ -1,13 +1,11 @@
 # memory/neo4j_memory.py — Neo4j long-term memory backend
 import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
+# Load environment variables from .env file
+load_dotenv()
 
-URI      = os.getenv("NEO4J_URI",      "neo4j+s://ef06bcb1.databases.neo4j.io")
-USER     = os.getenv("NEO4J_USER",     "ef06bcb1")
-PASSWORD = os.getenv("NEO4J_PASSWORD", "D0Mf4L0y1q5w78ntAfZnHKqDAYWCNn2Jq-Bj8x_G6pQ")
-
-driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
-
+driver = GraphDatabase.driver(URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
 def neo4j_write(char: str, relation: str, target: str, value: int, context: str) -> None:
     """Write or update a relationship edge between two characters in Neo4j."""
