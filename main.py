@@ -6,6 +6,8 @@ from story import STORY_DB, next_stage
 
 _BANNER = "=" * 50
 
+#gamedev: raw player input / checkpoint / npc_name
+
 def _print_banner() -> None:
     print(_BANNER)
     print("Type 'next' to advance stage, 'exit' to quit.\n")

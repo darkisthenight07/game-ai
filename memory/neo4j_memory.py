@@ -1,9 +1,6 @@
 # memory/neo4j_memory.py — Neo4j long-term memory backend
 import os
 from neo4j import GraphDatabase
-from dotenv import load_dotenv
-# Load environment variables from .env file
-load_dotenv()
 
 driver = GraphDatabase.driver(os.getenv("NEO4J_URI"), auth=(os.getenv("NEO4J_USER"), os.getenv("NEO4J_PASSWORD")))
 
