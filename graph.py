@@ -26,6 +26,7 @@ def build_agent():
     builder.add_node("output_reviewer", output_reviewer_node)
 
     # NPC pipelines
+    # Need to add conditional edges here
     for char in characters:
         base = f"npc_{char.replace(' ', '_')}"
 
